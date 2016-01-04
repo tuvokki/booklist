@@ -1,0 +1,27 @@
+<template name="ListBooks">
+  <h1>Books List</h1>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Author</th>
+        <th>Title</th>
+        <th>For age</th>
+        <th>Score</th>
+        <th>Rating</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each books}}
+        <tr>
+          <td>{{author}}</td>
+          <td>{{title}}</td>
+          <td>{{ageType}}</td>
+          <td>{{score}}</td>
+          <td>{{rating}}</td>
+          <td>{{#linkTo route='editBook'}}<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>{{/linkTo}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</template>
